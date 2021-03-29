@@ -1,0 +1,221 @@
+@font-face {
+  font-family: 'Arkhip';
+  font-display: auto;
+  src: url("../fonts/Arkhip.eot");
+  src: url("../fonts/Arkhip.eot#iefix") format("embedded-opentype"), url("../fonts/Arkhip.woff") format("woff"), url("../fonts/Arkhip.ttf") format("truetype"), url("../fonts/Arkhip.svg#Arkhip") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+a, button, input {
+  outline: none; }
+
+.container.brewing-guides .intro h1 {
+  text-align: left;
+  padding: 0; }
+.container.brewing-guides .intro p {
+  color: #aaa; }
+.container.brewing-guides .item-list .item {
+  margin-bottom: 65px; }
+  .container.brewing-guides .item-list .item img {
+    width: 100%; }
+  .container.brewing-guides .item-list .item h4 {
+    font-family: Arkhip;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #eb7955;
+    margin: 0; }
+  .container.brewing-guides .item-list .item span {
+    font-style: italic;
+    color: #aaa; }
+  .container.brewing-guides .item-list .item .action_button {
+    text-transform: initial; }
+  @media (min-width: 768px) {
+    .container.brewing-guides .item-list .item p {
+      min-height: 85px; } }
+  @media (max-width: 767px) {
+    .container.brewing-guides .item-list .item .action_button {
+      width: 100%; } }
+
+.modal {
+  display: block;
+  margin: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  visibility: hidden;
+  backface-visibility: hidden;
+  opacity: 0;
+  transition: opacity .15s ease-in-out; }
+  .modal.modal-open {
+    visibility: visible;
+    backface-visibility: visible;
+    opacity: 1;
+    z-index: 1; }
+  .modal .modal-inner {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .modal .modal-inner .modal-content {
+      background-color: white;
+      max-width: 35em;
+      padding: 1em 1.5em;
+      position: relative;
+      margin: 2em;
+      border-radius: 5px; }
+      .modal .modal-inner .modal-content .modal-close-icon {
+        position: absolute;
+        right: 1.5em; }
+      .modal .modal-inner .modal-content .modal-content-inner h1, .modal .modal-inner .modal-content .modal-content-inner h2, .modal .modal-inner .modal-content .modal-content-inner h3, .modal .modal-inner .modal-content .modal-content-inner h4, .modal .modal-inner .modal-content .modal-content-inner h5, .modal .modal-inner .modal-content .modal-content-inner h6 {
+        margin-bottom: 0.25em; }
+      .modal .modal-inner .modal-content .modal-content-inner p {
+        margin-bottom: 1em; }
+      .modal .modal-inner .modal-content .modal-buttons-seperator {
+        margin: 1.5em 0;
+        margin-top: 0; }
+      .modal .modal-inner .modal-content .modal-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center; }
+        .modal .modal-inner .modal-content .modal-buttons button {
+          margin-left: 1em; }
+          .modal .modal-inner .modal-content .modal-buttons button:first-child {
+            margin-left: 0; }
+
+#guide-modal .modal-content {
+  max-width: 25em;
+  padding-left: 45px;
+  padding-right: 45px; }
+  #guide-modal .modal-content .top {
+    margin-top: 45px; }
+    #guide-modal .modal-content .top img {
+      float: left; }
+    #guide-modal .modal-content .top p {
+      float: left;
+      width: 190px;
+      margin-left: 25px;
+      font-weight: bold;
+      margin-top: 3px;
+      font-size: 19px;
+      line-height: 30px; }
+  #guide-modal .modal-content .form .left-side {
+    float: left;
+    margin-left: 20px; }
+    #guide-modal .modal-content .form .left-side label {
+      text-transform: initial;
+      margin-top: 3px;
+      font-weight: initial; }
+  #guide-modal .modal-content .form .right-side {
+    float: left;
+    margin-left: 10px;
+    width: 220px; }
+    #guide-modal .modal-content .form .right-side .row {
+      margin-bottom: 13px; }
+      #guide-modal .modal-content .form .right-side .row input[type=text], #guide-modal .modal-content .form .right-side .row input[type=email] {
+        height: 35px;
+        min-height: 35px;
+        border-radius: 5px;
+        border-width: 2px;
+        margin-bottom: 0; }
+      #guide-modal .modal-content .form .right-side .row input[type=checkbox] {
+        float: left;
+        height: 15px;
+        min-height: initial;
+        margin-top: 6px; }
+      #guide-modal .modal-content .form .right-side .row input[type=submit] {
+        text-transform: initial; }
+      #guide-modal .modal-content .form .right-side .row label {
+        float: left;
+        width: 195px;
+        text-transform: initial;
+        font-size: 10px;
+        font-weight: initial;
+        margin-left: 2px; }
+  #guide-modal .modal-content .finish {
+    margin-top: 45px; }
+    #guide-modal .modal-content .finish p {
+      font-weight: bold;
+      line-height: 25px;
+      font-size: 17px;
+      letter-spacing: 0.5px; }
+    #guide-modal .modal-content .finish .socmed {
+      margin-top: 35px;
+      text-align: center; }
+
+.accordion {
+  margin: 1rem 0;
+  padding: 0;
+  list-style: none; }
+
+/* Thumb */
+.accordion-thumb {
+  margin: 0;
+  padding: 12px;
+  cursor: pointer;
+  font-weight: normal;
+  background-color: #F1F1F1;
+  color: #EB7955;
+  border-radius: 7px;
+  font-size: 18px;
+  line-height: 21px; }
+  .accordion-thumb::before {
+    content: '';
+    display: inline-block;
+    height: 7px;
+    width: 7px;
+    margin-right: 1rem;
+    margin-left: .5rem;
+    vertical-align: middle;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    transform: rotate(-45deg);
+    transition: transform .2s ease-out; }
+
+.accordion-thumb:hover {
+  color: #00489D; }
+
+/* Panel */
+.accordion-panel {
+  margin: 0;
+  padding: 20px 45px;
+  display: none; }
+  .accordion-panel h4 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    color: #4A4A4A; }
+  .accordion-panel h5 {
+    color: #00489D;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 20px;
+    padding-bottom: 5px; }
+  .accordion-panel ul {
+    margin: 0; }
+  .accordion-panel li {
+    font-size: 14px;
+    line-height: 22px;
+    list-style: none;
+    color: #4A4A4A; }
+
+.accordion-panel p {
+  font-size: 14px;
+  line-height: 28px;
+  color: #4A4A4A !important; }
+
+/* Active */
+.accordion-item.is-active .accordion-thumb {
+  background-color: #124F99;
+  color: #fff; }
+.accordion-item.is-active .accordion-thumb:hover {
+  color: #fff; }
+.accordion-item.is-active .accordion-thumb::before {
+  transform: rotate(45deg); }
